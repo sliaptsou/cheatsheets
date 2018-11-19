@@ -53,3 +53,14 @@ rm file42 - удалить файл file42
 rm -i file42 - удалить файл file42 в интеркативном режиме
 rm -rf - удалить все файлы и папки
 ```
+
+Команда `cp`
+```sh
+cp file42 file42.copy - копировать файл file42
+cp SinkoDeMayo dir42 - копировать файл SinkoDeMayo в dir42
+cp -r dir42/ dir33 - копировать всю папку
+cp file42 file42.copy SinkoDeMayo dir42/ - копировать несколько файлов в папку
+cp -i SinkoDeMayo file42 - копировать несколько файлов в папку в интеркативном режиме
+```
+
+[More](https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet)
