@@ -26,6 +26,7 @@ git config --global alias.com "checkout -- ."
 git config --global alias.st status
 git config --global alias.d diff
 git config --global alias.cma "commit -a"
+git config --global alias.cmm "commit --amend"
 git config --global alias.po "push origin"
 git config --global alias.bd "branch -D"
 git config --global alias.pod "push origin --delete"
@@ -34,6 +35,7 @@ git config --global alias.sth "stash"
 git config --global alias.stha "stash apply"
 git config --global alias.pum "pull upstream master"
 git config --global alias.rmc "rm --cached"
+git config --global alias.lg "log --stat"
 git config --global alias.lolg "log --oneline --graph"
 git config --global alias.vladik "rm -f"
 
