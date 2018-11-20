@@ -11,8 +11,9 @@ git config --global user.name "Yauheni Sliaptsou"
 git config --global user.email j.sliapcou@abcmobile.com
 ```
 
-- Алиас для git
+- Алиас для git. В конец файла `C:\Program Files\Git\etc\bash.bashrc` вставить строки
 ```sh
+#alias for Git
 alias g='git'
 ```
 
@@ -63,6 +64,11 @@ git config --global core.editor "nano"
 - Сделать `Notepad++` редактором по умолчанию
 ```sh
 git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+```
+
+- В PHPStorm `Tools > Terminal` впиши
+```sh
+"C:\Program Files\Git\bin\sh.exe" --login -i
 ```
 
 Основы
