@@ -53,6 +53,11 @@ git config --global alias.mr merge
 git config --global commit.template C:/ABC/.git-commit-template.txt
 ```
 
+- Подпись gpg ключом
+```
+git commit -S -m 'comment'
+```
+
 - Проверка настроек
 ```sh
 git config --list
