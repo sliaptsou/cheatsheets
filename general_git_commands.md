@@ -4,11 +4,13 @@
 - Указание имени 
 ```sh
 git config --global user.name "Yauheni Sliaptsou"
+git config user.name "Yauheni Sliaptsou"
 ```
 
 - Указание email
 ```sh
 git config --global user.email j.sliapcou@abcmobile.com
+git config user.email j.sliapcou@abcmobile.com
 ```
 
 - Алиас для git. В конец файла `C:\Program Files\Git\etc\bash.bashrc` вставить строки
