@@ -21,25 +21,24 @@ alias g='git'
 
 - Присвоение алиаса команде
 ```sh
-git config --global alias.cb "checkout -b"
+git config --global alias.cob "checkout -b"
 git config --global alias.pud "pull upstream dev"
 git config --global alias.cod "checkout dev"
-git config --global alias.com "checkout -- ."
 git config --global alias.st status
 git config --global alias.d diff
 git config --global alias.cma "commit -a"
 git config --global alias.cmm "commit --amend"
-git config --global alias.po "push origin"
-git config --global alias.bd "branch -D"
+git config --global alias.pso "push origin"
+git config --global alias.brd "branch -D"
 git config --global alias.pod "push origin --delete"
 git config --global alias.df "diff --staged"
 git config --global alias.sth "stash"
 git config --global alias.stha "stash apply"
 git config --global alias.pum "pull upstream master"
 git config --global alias.rmc "rm --cached"
-git config --global alias.lg "log --stat"
+git config --global alias.ls "log --stat"
 git config --global alias.lolg "log --oneline --graph"
-git config --global alias.vladik "rm -f"
+? git config --global alias.lpf "log --pretty=format:"%h - %an, %ar : %s""
 
 git config --global alias.co checkout
 git config --global alias.cm commit
@@ -47,7 +46,6 @@ git config --global alias.ps push
 git config --global alias.br branch
 git config --global alias.ft fetch
 git config --global alias.mr merge
-? git config --global alias.lpf "log --pretty=format:"%h - %an, %ar : %s""
 ```
 
 - Задать шаблон для коммитов по умолчанию
@@ -55,9 +53,9 @@ git config --global alias.mr merge
 git config --global commit.template C:/ABC/.git-commit-template.txt
 ```
 
-- Подпись gpg ключом
+- Включить подпись gpg ключом
 ```
-git commit -S -m 'comment'
+git config --global commit.gpgsign true
 ```
 
 - Проверка настроек
@@ -87,34 +85,42 @@ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -mul
 ```sh
 git add file_name.ext
 ```
+
 - Состояние файлов
 ```sh
 git status
 ```
+
 - Узнать что изменено, но не проиндексировано
 ```sh
 git diff
 ```
-- Узнать что из проиндексированого войдёт в следующи коммит
+
+- Узнать что из проиндексированого войдёт в следующий коммит
 ```sh
 git diff --staged
 ```
+
 - Временное скрытие изменений
 ```sh
 git stash
 ```
+
 - Извлечение несохраненных изменений
 ```sh
 git stash apply
 ```
+
 - Создание коммита с комментарием
 ```sh
 git commit -m "commit comment"
 ```
+
 - Создание коммита с добавлением файлов в индексацию
 ```sh
 git commit -a -m "commit comment'
 ```
+
 - Добавление изменений к коммиту. Второй коммит заменяет результат первого
 ```sh
 git commit -m 'initial commit'
