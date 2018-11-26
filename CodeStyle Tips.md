@@ -66,7 +66,7 @@ if ($ready && $steady) {
 $isUpdated = $this->name !== $this->getOldAttribute('name');
 return $needed = $isUpdated ?: false;
 ```
-- Помни про null коаоесцентный оператор [дока](http://php.net/manual/ru/migration70.new-features.php):
+- Помни про null коалесцентный оператор [дока](http://php.net/manual/ru/migration70.new-features.php):
 ```php
 $model->rotation->name ?? null
 // тоже самое что и 
