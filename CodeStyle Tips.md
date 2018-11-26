@@ -66,6 +66,12 @@ if ($ready && $steady) {
 $isUpdated = $this->name !== $this->getOldAttribute('name');
 return $needed = $isUpdated ?: false;
 ```
+- Помни про null коаоесцентный оператор [дока](http://php.net/manual/ru/migration70.new-features.php):
+```php
+$model->rotation->name ?? null
+// тоже самое что и 
+$model->rotation ? $model->rotation->name : null;
+```
 - В операторе `switch` упорядочи `case` по частоте, `default` используй для обработки значений по умолчанию или для отлова исключений;
 
 
