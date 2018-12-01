@@ -1,5 +1,5 @@
 
-Symfony ([source](https://symfony.com/doc/current/contributing/code/standards.html))
+Symfony
 - 
 - В многострочном массиве после каждого элемента, даже после последнего;
 - Добавляй __пустую строку__ перед операторами `return`, если только оператор return не находится внутри группы операторов (например, оператора if);
@@ -17,3 +17,10 @@ Symfony ([source](https://symfony.com/doc/current/contributing/code/standards.ht
 - Сгруппируй аннотации таким образом, чтобы аннотации одного типа сразу следовали друг за другом, а аннотации другого типа были разделены одной пустой строкой;
 - Опустить тег `@return`, если метод ничего не возвращает;
 - Не используй аннотации `@package` и `@subpackage`;
+
+[source](https://symfony.com/doc/current/contributing/code/standards.html)
+
+Yii2
+-
+
+[source](https://p0vidl0.info/yii2-sovremennyj-stil-php-koda.html)
