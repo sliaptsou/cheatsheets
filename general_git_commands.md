@@ -38,6 +38,7 @@ git config --global alias.pum "pull upstream master"
 git config --global alias.rmc "rm --cached"
 git config --global alias.ls "log --stat"
 git config --global alias.lolg "log --oneline --graph"
+git config --global alias.rpo "remote prune origin"
 ? git config --global alias.lpf "log --pretty=format:"%h - %an, %ar : %s""
 
 git config --global alias.co checkout
@@ -165,7 +166,10 @@ git merge upstream/master
 ```sh
 git pull
 ```
-
+- Удалить ссылки на ветки удаленного репозитория, которых больше не существует ([подробнее](https://ru.stackoverflow.com/questions/577369/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E-%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D1%83-%D0%BD%D0%B0-%D0%BD%D0%B5%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D1%83%D1%8E-%D1%83%D0%B6%D0%B5-%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D1%83%D1%8E-%D0%B2%D0%B5%D1%82%D0%BA%D1%83))
+```sh
+git remote prune origin
+```
 - Удаление ветки `fixbug` c удаленного сервера `origin` ([подробнее](https://git-scm.com/book/ru/v2/%D0%92%D0%B5%D1%82%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-Git-%D0%A3%D0%B4%D0%B0%D0%BB%D1%91%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B2%D0%B5%D1%82%D0%BA%D0%B8))
 ```sh
 git push origin --delete fixbug
