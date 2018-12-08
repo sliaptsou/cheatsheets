@@ -87,6 +87,11 @@ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -mul
 git add file_name.ext
 ```
 
+- Добавление всех файлов с расширением 'ext' в индексацию
+```sh
+git add *.ext
+```
+
 - Состояние файлов
 ```sh
 git status
@@ -100,6 +105,12 @@ git diff
 - Узнать что из проиндексированого войдёт в следующий коммит
 ```sh
 git diff --staged
+```
+
+- Чтобы сделать коммит (например, исправление ошибки) в ветке «А», работая в ветке «Б»,
+```sh
+# Сначала необходимо переключиться на ветку с коммитом, скопировать commit-id, а потом перейти обратно в свою ветку. Затем выполните следующую команду, чтобы получить коммит в рабочей ветке:
+git cherry-pick <commit-id>
 ```
 
 - Временное скрытие изменений
@@ -119,14 +130,19 @@ git commit -m "commit comment"
 
 - Создание коммита с добавлением файлов в индексацию
 ```sh
-git commit -a -m "commit comment'
+git commit -a -m 'commit comment'
 ```
 
 - Добавление изменений к коммиту. Второй коммит заменяет результат первого
 ```sh
-git commit -m 'initial commit'
-git add forgotten_file
-git commit --amend
+git commit --amend -m "сообщение"
+git commit --amend --no-edit #не добавлять ещё одно сообщение
+git push origin <имя ветки> -f # код запушен в удаленный репозиторий и нужно изменить сообщение
+```
+
+- Отменить последний коммит
+```sh
+git reset --hard <commit hash>
 ```
 
 - Отмена проиндексированных изменений (перед коммитом) 'file_name.ext' (файл не войдёт в коммит)
@@ -166,10 +182,12 @@ git merge upstream/master
 ```sh
 git pull
 ```
+
 - Удалить ссылки на ветки удаленного репозитория, которых больше не существует ([подробнее](https://ru.stackoverflow.com/questions/577369/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E-%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D1%83-%D0%BD%D0%B0-%D0%BD%D0%B5%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D1%83%D1%8E-%D1%83%D0%B6%D0%B5-%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D1%83%D1%8E-%D0%B2%D0%B5%D1%82%D0%BA%D1%83))
 ```sh
 git remote prune origin
 ```
+
 - Удаление ветки `fixbug` c удаленного сервера `origin` ([подробнее](https://git-scm.com/book/ru/v2/%D0%92%D0%B5%D1%82%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-Git-%D0%A3%D0%B4%D0%B0%D0%BB%D1%91%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B2%D0%B5%D1%82%D0%BA%D0%B8))
 ```sh
 git push origin --delete fixbug
@@ -180,11 +198,22 @@ git push origin --delete fixbug
 git branch -d fixbug
 ```
 
-- Переименование ветки (локально и удаленно)
+- Переименование локальной ветки
 ```sh
-git branch -m old_name new_name – переименовать локальную ветку
-git push origin :old_name – удалить старую ветку
-git push --set-upstream origin new_name – выгрузить новую ветку и "закрепить" ее за локальной веткой
+git branch -m <старое имя ветки> <новое имя ветки>
+```
+
+- Переименование текущей локальной ветки
+```sh
+git branch -m <новое имя ветки>
+```
+
+- Переименование удаленной ветки
+```sh
+git push <имя удаленной ветки> --delete <старое имя ветки>
+git push <имя удаленной ветки> <новое имя ветки>
+#Если имя локальной ветки не совпадает с именем ветки в репозитории
+git push <имя удаленной ветки> <локальное имя ветки>:<имя удаленной ветки>
 ```
 
 - Отслеживание удаленной ветки `origin/fixbug` текущей локальной веткой.
