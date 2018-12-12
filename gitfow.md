@@ -29,27 +29,27 @@ __Хотфикс__
 
 - Начать слежение за удалённой веткой `hotfix/x.y`
 ```sh
-git flow hotfix track <x.y>
+git flow hotfix track --fetch <x.y>
 ```
 
-- Начать хотфикс `fixname` от ветки `hotfix/x.y`
+- Начать багфикс `fixname` от ветки `hotfix/x.y`
 ```sh
 git flow bugfix start <fixname> <hotfix/x.y>
 ```
 
-- Публикация хотфикса `fixname`
+- Публикация багфикса `fixname`
 ```sh
 git flow bugfix publish <fixname>
 ```
 
-__Локальный хотфикс, если релиз вытянут на локальную машину__
+__Багфикс для релиза__
 
-- Начало хотфикса (по умолчанию от релиза `release_name/x.y`)
+- Начало багфикса от релиза `release_name/x.y`
 ```sh
-git flow hotfix start <hotfix_name> <release_name/x.y>
+git flow bugfix start <bugfix_name> <release_name/x.y>
 ```
 
-- Публикация хотфикса (по умолчанию в релиз `release_name/x.y`)
+- Публикация багфикса
 ```sh
-git flow hotfix publish <hotfix_name> <release_name/x.y>
+git flow bugfix publish <bugfix_name>
 ```
