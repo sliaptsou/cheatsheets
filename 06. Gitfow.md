@@ -44,6 +44,10 @@ git flow bugfix publish <fixname>
 
 __Багфикс для релиза__
 
+- Начать слежение за удалённой веткой релиза `release/x.y`
+```sh
+git flow release track <x.y>
+```
 - Начало багфикса от релиза `release_name/x.y`
 ```sh
 git flow bugfix start <bugfix_name> <release_name/x.y>
