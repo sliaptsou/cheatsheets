@@ -1,0 +1,19 @@
+#Branch_name:
+[MO-](https://abcmobile.myjetbrains.com/youtrack/issue/MO-)
+
+#for bugfix ('#' and number of pull request)
+
+#Description
+
+#Awaiting requested review from:
+#- Евгений Борисович @zipp0akazip ;
+#- Александр Валерьевич @zak956 ;
+
+#@obezludko , нужно тестить:
+# - запил 1;
+# - запил 2;
+
+#feature — добавление новой функциональности уровня приложения
+#fix — исправил баг
+#style — исправляем опечатки, исправляем форматирование
+#refactor — рефакторинг кода приложения
